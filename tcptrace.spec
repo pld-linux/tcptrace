@@ -9,11 +9,10 @@ License:	BSD
 Group:		Applications/Networking
 Source0:	http://www.tcptrace.org/download/%{name}-%{version}.tar.gz
 # Source0-md5:	4ef34b76d6c060dc978ed3c777a15913
-Patch0:		%{name}-flex.patch
 URL:		http://www.tcptrace.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	flex
+BuildRequires:	flex >= 2.5.31-4
 BuildRequires:	bison
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -49,7 +48,6 @@ gráficos destes dados.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__aclocal}

@@ -8,6 +8,7 @@ Epoch:		1
 License:	BSD
 Group:		Applications/Networking
 Source0:	http://www.tcptrace.org/download/%{name}-%{version}.tar.gz
+# Source0-md5:	565c370620e5f058bc9a3607b8634a3d
 URL:		http://www.tcptrace.org/
 BuildRequires:	autoconf
 BuildRequires:	automake

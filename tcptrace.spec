@@ -3,7 +3,7 @@ Summary(pl):	Narzêdzie do analizy zrzutów pakietów TCP
 Summary(pt_BR):	Ferramenta para análise de arquivos de captura de tráfego de rede
 Name:		tcptrace
 Version:	6.4.2
-Release:	0.1
+Release:	1
 Epoch:		1
 License:	BSD
 Group:		Applications/Networking

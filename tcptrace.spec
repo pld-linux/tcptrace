@@ -9,6 +9,7 @@ License:	BSD
 Group:		Applications/Networking
 Source0:	http://www.tcptrace.org/download/%{name}-%{version}.tar.gz
 # Source0-md5:	4ef34b76d6c060dc978ed3c777a15913
+Patch0:		%{name}-flex.patch
 URL:		http://www.tcptrace.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -48,12 +49,13 @@ gráficos destes dados.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__aclocal}
 %{__autoconf}
 %configure
-%{__make} CCOPT="-O"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT

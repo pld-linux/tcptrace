@@ -1,15 +1,16 @@
-Summary:	tool for analysis of TCP dump files
-Summary(pl):	narzêdzie do analizy zrzutów pakietów TCP
+Summary:	Tool for analysis of TCP dump files
+Summary(pl):	Narzêdzie do analizy zrzutów pakietów TCP
 Name:		tcptrace
 Version:	5.2.1
 Release:	2
-License:	BSD
 Epoch:		1
+License:	BSD
 Group:		Applications/Networking
 Group(de):	Applikationen/Netzwerkwesen
 Group(pl):	Aplikacje/Sieciowe
 Source0:	http://www.tcptrace.org/download/%{name}.%{version}.tar.gz
 URL:		http://www.tcptrace.org/
+BuildRequires:	automake
 BuildRequires:	flex
 BuildRequires:	bison
 BuildRequires:	libpcap-devel

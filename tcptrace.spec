@@ -38,7 +38,7 @@ przysz³ej analizy.
 
 %build
 aclocal
-autoconf
+%{__autoconf}
 %configure
 %{__make}
 

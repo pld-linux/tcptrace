@@ -50,6 +50,7 @@ gráficos destes dados.
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.sub .
 #%{__aclocal}
 %{__autoconf}
 %configure

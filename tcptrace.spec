@@ -2,13 +2,13 @@ Summary:	Tool for analysis of TCP dump files
 Summary(pl):	Narzêdzie do analizy zrzutów pakietów TCP
 Summary(pt_BR):	Ferramenta para análise de arquivos de captura de tráfego de rede
 Name:		tcptrace
-Version:	6.4.2
+Version:	6.6.1
 Release:	1
 Epoch:		1
 License:	BSD
 Group:		Applications/Networking
 Source0:	http://www.tcptrace.org/download/%{name}-%{version}.tar.gz
-# Source0-md5:	4ef34b76d6c060dc978ed3c777a15913
+# Source0-md5:	812e0811a8d470c380c6b30277ac8bc4
 URL:		http://www.tcptrace.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -50,7 +50,7 @@ gráficos destes dados.
 %setup -q
 
 %build
-%{__aclocal}
+#%{__aclocal}
 %{__autoconf}
 %configure
 %{__make}

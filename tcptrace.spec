@@ -6,8 +6,6 @@ Release:	1
 Epoch:		1
 License:	BSD
 Group:		Applications/Networking
-Group(de):	Applikationen/Netzwerkwesen
-Group(pl):	Aplikacje/Sieciowe
 Source0:	http://www.tcptrace.org/download/%{name}.%{version}.tar.gz
 URL:		http://www.tcptrace.org/
 BuildRequires:	automake

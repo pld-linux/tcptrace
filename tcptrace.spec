@@ -2,7 +2,7 @@ Summary:	tool for analysis of TCP dump files
 Summary(pl):	narzêdzie do analizy zrzutów pakietów TCP
 Name:		tcptrace
 Version:	5.2.1
-Release:	1
+Release:	2
 License:	BSD
 Epoch:		1
 Group:		Applications/Networking
@@ -38,7 +38,8 @@ przysz³ej analizy.
 %setup -q -n %{name}_%{version}
 
 %build
-%configure
+aclocal
+%configure2_13
 %{__make}
 
 %install

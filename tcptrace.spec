@@ -1,12 +1,12 @@
 Summary:	Tool for analysis of TCP dump files
 Summary(pl):	Narzêdzie do analizy zrzutów pakietów TCP
 Name:		tcptrace
-Version:	6.0.1
+Version:	6.2.0
 Release:	1
 Epoch:		1
 License:	BSD
 Group:		Applications/Networking
-Source0:	http://www.tcptrace.org/download/%{name}.%{version}.tar.gz
+Source0:	http://www.tcptrace.org/download/%{name}-%{version}.tar.gz
 URL:		http://www.tcptrace.org/
 BuildRequires:	automake
 BuildRequires:	flex
@@ -34,7 +34,7 @@ og³oszeñ okien itd. Mo¿e tak¿e generowaæ statystyki graficzne do
 przysz³ej analizy.
 
 %prep
-%setup -q -n %{name}.%{version}
+%setup -q
 
 %build
 aclocal
@@ -49,13 +49,11 @@ install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man1}
 install tcptrace	$RPM_BUILD_ROOT%{_sbindir}
 install tcptrace.man	$RPM_BUILD_ROOT%{_mandir}/man1/tcptrace.1
 
-gzip -9nf THANKS CHANGES FAQ README*
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc THANKS CHANGES FAQ README* ARGS
 %attr(755,root,root) %{_sbindir}/*
 %{_mandir}/man*/*

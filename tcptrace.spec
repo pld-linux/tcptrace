@@ -35,19 +35,20 @@ og³oszeñ okien itd. Mo¿e tak¿e generowaæ statystyki graficzne do
 przysz³ej analizy.
 
 %description -l pt_BR
-tcptrace é uma ferramenta para análise de arquivos de captura de tráfego
-de rede. Podem ser usados como arquivos de entrada os dados produzidos
-por diversos sniffers populares, como tcpdump, snoop, etherpeek,
-HP Net Metrix e WinDump. A saída gerada consiste em informações de cada
-conexão vista, como tempo decorrido, bytes e segmentos enviados e
-recebidos, retransmissões, tempos de resposta, anúncios de janela,
-taxas, etc. Esta ferramenta também pode produzir gráficos destes dados.
+tcptrace é uma ferramenta para análise de arquivos de captura de
+tráfego de rede. Podem ser usados como arquivos de entrada os dados
+produzidos por diversos sniffers populares, como tcpdump, snoop,
+etherpeek, HP Net Metrix e WinDump. A saída gerada consiste em
+informações de cada conexão vista, como tempo decorrido, bytes e
+segmentos enviados e recebidos, retransmissões, tempos de resposta,
+anúncios de janela, taxas, etc. Esta ferramenta também pode produzir
+gráficos destes dados.
 
 %prep
 %setup -q
 
 %build
-aclocal
+%{__aclocal}
 %{__autoconf}
 %configure
 %{__make} CCOPT="-O"

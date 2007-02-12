@@ -1,6 +1,6 @@
 Summary:	Tool for analysis of TCP dump files
-Summary(pl.UTF-8):   Narzędzie do analizy zrzutów pakietów TCP
-Summary(pt_BR.UTF-8):   Ferramenta para análise de arquivos de captura de tráfego de rede
+Summary(pl.UTF-8):	Narzędzie do analizy zrzutów pakietów TCP
+Summary(pt_BR.UTF-8):	Ferramenta para análise de arquivos de captura de tráfego de rede
 Name:		tcptrace
 Version:	6.6.7
 Release:	1

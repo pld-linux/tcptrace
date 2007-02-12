@@ -1,6 +1,6 @@
 Summary:	Tool for analysis of TCP dump files
-Summary(pl):	Narzêdzie do analizy zrzutów pakietów TCP
-Summary(pt_BR):	Ferramenta para análise de arquivos de captura de tráfego de rede
+Summary(pl.UTF-8):   NarzÄ™dzie do analizy zrzutÃ³w pakietÃ³w TCP
+Summary(pt_BR.UTF-8):   Ferramenta para anÃ¡lise de arquivos de captura de trÃ¡fego de rede
 Name:		tcptrace
 Version:	6.6.7
 Release:	1
@@ -27,24 +27,24 @@ segments sent and recieved, retransmissions, round trip times, window
 advertisements, throughput, and more. It can also produce a number of
 graphs for further analysis.
 
-%description -l pl
-tcptrace to narzêdzie do analizowania zrzutów pakietów TCP. tcptrace
-jako dane wej¶ciowe przyjmuje zrzuty stworzone przez popularne
+%description -l pl.UTF-8
+tcptrace to narzÄ™dzie do analizowania zrzutÃ³w pakietÃ³w TCP. tcptrace
+jako dane wejÅ›ciowe przyjmuje zrzuty stworzone przez popularne
 programy typu tcpdump, snoop, etherpeek, HP Net Metrix, and WinDump.
-tcptrace mo¿e generowaæ kilka ró¿nego rodzaju raportów na temat
-po³±czeñ, czasu ich trwania, bajtów, retransmisji, czasów round trip,
-og³oszeñ okien itd. Mo¿e tak¿e generowaæ statystyki graficzne do
-przysz³ej analizy.
+tcptrace moÅ¼e generowaÄ‡ kilka rÃ³Å¼nego rodzaju raportÃ³w na temat
+poÅ‚Ä…czeÅ„, czasu ich trwania, bajtÃ³w, retransmisji, czasÃ³w round trip,
+ogÅ‚oszeÅ„ okien itd. MoÅ¼e takÅ¼e generowaÄ‡ statystyki graficzne do
+przyszÅ‚ej analizy.
 
-%description -l pt_BR
-tcptrace é uma ferramenta para análise de arquivos de captura de
-tráfego de rede. Podem ser usados como arquivos de entrada os dados
+%description -l pt_BR.UTF-8
+tcptrace Ã© uma ferramenta para anÃ¡lise de arquivos de captura de
+trÃ¡fego de rede. Podem ser usados como arquivos de entrada os dados
 produzidos por diversos sniffers populares, como tcpdump, snoop,
-etherpeek, HP Net Metrix e WinDump. A saída gerada consiste em
-informações de cada conexão vista, como tempo decorrido, bytes e
-segmentos enviados e recebidos, retransmissões, tempos de resposta,
-anúncios de janela, taxas, etc. Esta ferramenta também pode produzir
-gráficos destes dados.
+etherpeek, HP Net Metrix e WinDump. A saÃ­da gerada consiste em
+informaÃ§Ãµes de cada conexÃ£o vista, como tempo decorrido, bytes e
+segmentos enviados e recebidos, retransmissÃµes, tempos de resposta,
+anÃºncios de janela, taxas, etc. Esta ferramenta tambÃ©m pode produzir
+grÃ¡ficos destes dados.
 
 %prep
 %setup -q

@@ -3,17 +3,18 @@ Summary(pl.UTF-8):	Narzędzie do analizy zrzutów pakietów TCP
 Summary(pt_BR.UTF-8):	Ferramenta para análise de arquivos de captura de tráfego de rede
 Name:		tcptrace
 Version:	6.6.7
-Release:	1
+Release:	2
 Epoch:		1
 License:	BSD
 Group:		Applications/Networking
 Source0:	http://www.tcptrace.org/download/%{name}-%{version}.tar.gz
 # Source0-md5:	68128dc1817b866475e2f048e158f5b9
+Patch0:		ac264.patch
 URL:		http://www.tcptrace.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	flex >= 2.5.31-4
 BuildRequires:	bison
+BuildRequires:	flex >= 2.5.31-4
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -48,10 +49,10 @@ gráficos destes dados.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-cp -f /usr/share/automake/config.sub .
-#%{__aclocal}
+%{__aclocal}
 %{__autoconf}
 %configure
 %{__make}
@@ -59,9 +60,8 @@ cp -f /usr/share/automake/config.sub .
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
-
-install tcptrace xpl2gpl	$RPM_BUILD_ROOT%{_bindir}
-install tcptrace.man		$RPM_BUILD_ROOT%{_mandir}/man1/tcptrace.1
+install -p tcptrace xpl2gpl	$RPM_BUILD_ROOT%{_bindir}
+cp -a tcptrace.man $RPM_BUILD_ROOT%{_mandir}/man1/tcptrace.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -69,5 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc THANKS CHANGES FAQ README* ARGS
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man*/*
+%attr(755,root,root) %{_bindir}/tcptrace
+%attr(755,root,root) %{_bindir}/xpl2gpl
+%{_mandir}/man1/tcptrace.1*

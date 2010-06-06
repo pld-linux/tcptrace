@@ -1,0 +1,14 @@
+based on info from here:
+http://bugs.gentoo.org/show_bug.cgi?id=281690
+
+--- tcptrace-6.6.7/aclocal.m4~	2001-09-26 16:38:12.000000000 +0300
++++ tcptrace-6.6.7/aclocal.m4	2010-06-06 13:17:28.524740788 +0300
+@@ -44,7 +44,7 @@
+ dnl
+ AC_DEFUN(AC_LBL_C_INIT,
+     [AC_PREREQ(2.12)
+-    AC_BEFORE([$0], [AC_PROG_CC])
++    AC_REQUIRE([AC_PROG_CC])
+     AC_BEFORE([$0], [AC_LBL_FIXINCLUDES])
+     AC_BEFORE([$0], [AC_LBL_DEVEL])
+     AC_ARG_WITH(gcc, [  --without-gcc           don't use gcc])

@@ -10,6 +10,8 @@ Group:		Applications/Networking
 Source0:	http://www.tcptrace.org/download/%{name}-%{version}.tar.gz
 # Source0-md5:	68128dc1817b866475e2f048e158f5b9
 Patch0:		ac264.patch
+Patch1:		ftp://ftp.debian.org/debian/pool/main/t/tcptrace/%{name}_6.6.7-4.1.diff.gz
+# Patch1-md5:	d073fb808e942f75399d035ba80c78cf
 URL:		http://www.tcptrace.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -50,6 +52,7 @@ gráficos destes dados.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__aclocal}
